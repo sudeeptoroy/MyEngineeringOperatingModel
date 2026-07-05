@@ -1,0 +1,463 @@
+# Engineering Operating Model (EOM)
+
+## Repository Strategy & Framework Design Summary
+
+---
+
+# Vision
+
+The **Engineering Operating Model (EOM)** is a framework for building enterprise software through a governed, specification-driven, domain-centric engineering methodology.
+
+It is **not** an AI framework.
+
+It is **not** a prompt library.
+
+It is an **Engineering Operating System** that defines how engineering is performed while allowing humans and AI to collaborate using the same standards, workflows, and governance.
+
+AI is an accelerator—not the foundation.
+
+---
+
+# Design Philosophy
+
+The framework is built on the following principles:
+
+* Product Agnostic
+* Technology Agnostic
+* AI Agnostic
+* Specification Driven
+* Domain Driven
+* Test Driven
+* Documentation First
+* Governance Driven
+* Continuously Evolvable
+
+Every engineering activity should produce measurable engineering artifacts.
+
+Documentation is treated as code.
+
+---
+
+# Repository Philosophy
+
+The repository itself should be treated as an open-source engineering product.
+
+This means:
+
+* Versioned releases
+* Roadmaps
+* Milestones
+* Sprints
+* ADRs
+* Standards
+* Reviews
+* Continuous improvement
+
+The framework should evolve exactly as the software built with it evolves.
+
+---
+
+# Documentation Philosophy
+
+Every Markdown document should be production quality.
+
+Documents should not be notes.
+
+They should be publishable engineering documentation.
+
+Every document should contain, where applicable:
+
+* Metadata
+* Purpose
+* Scope
+* Audience
+* Responsibilities
+* Inputs
+* Outputs
+* Dependencies
+* Relationships
+* Mermaid diagrams
+* Examples
+* References
+* Future evolution
+* Version history
+
+Every document should be independently understandable.
+
+A reader landing on any page should understand:
+
+* Why the document exists
+* Where it fits
+* What depends on it
+* What it depends on
+
+---
+
+# Documentation Metadata Standard
+
+Every document begins with a metadata block.
+
+```yaml
+---
+title:
+version:
+status:
+owner:
+author:
+last_updated:
+---
+```
+
+This makes the repository feel like an enterprise engineering handbook rather than a collection of Markdown files.
+
+---
+
+# Repository Structure
+
+```text
+engineering-operating-model/
+
+├── README.md
+├── LICENSE
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── CHANGELOG.md
+│
+├── docs/
+│
+│   ├── README.md
+│   │
+│   ├── 00-foundation/
+│   │   ├── README.md
+│   │   ├── vision.md
+│   │   ├── mission.md
+│   │   ├── principles.md
+│   │   ├── glossary.md
+│   │   ├── maturity-model.md
+│   │   └── roadmap.md
+│   │
+│   ├── 01-operating-model/
+│   │   ├── README.md
+│   │   ├── engineering-operating-model.md
+│   │   ├── engineering-decision-flow.md
+│   │   ├── engineering-lifecycle.md
+│   │   └── operating-model-architecture.md
+│   │
+│   ├── 02-personas/
+│   │   ├── README.md
+│   │   ├── product-persona.md
+│   │   ├── security-persona.md
+│   │   ├── architecture-persona.md
+│   │   ├── engineering-persona.md
+│   │   ├── qa-persona.md
+│   │   ├── devops-persona.md
+│   │   └── governance-persona.md
+│   │
+│   ├── 03-capabilities/
+│   │   ├── README.md
+│   │   ├── capability-model.md
+│   │   ├── product-capabilities.md
+│   │   ├── security-capabilities.md
+│   │   ├── architecture-capabilities.md
+│   │   ├── engineering-capabilities.md
+│   │   ├── qa-capabilities.md
+│   │   ├── devops-capabilities.md
+│   │   └── governance-capabilities.md
+│   │
+│   ├── 04-skills/
+│   │   ├── README.md
+│   │   ├── skill-model.md
+│   │   ├── implementation-inventory.md
+│   │   ├── requirements-traceability.md
+│   │   ├── backend-analysis.md
+│   │   ├── frontend-analysis.md
+│   │   ├── api-analysis.md
+│   │   ├── database-analysis.md
+│   │   ├── testing-assessment.md
+│   │   ├── security-assessment.md
+│   │   ├── ai-readiness.md
+│   │   ├── technical-debt.md
+│   │   └── engineering-confidence.md
+│   │
+│   ├── 05-agents/
+│   │   ├── README.md
+│   │   ├── agent-model.md
+│   │   ├── product-analyst.md
+│   │   ├── solution-architect.md
+│   │   ├── backend-engineer.md
+│   │   ├── frontend-engineer.md
+│   │   ├── qa-engineer.md
+│   │   ├── security-engineer.md
+│   │   ├── devops-engineer.md
+│   │   └── governance-analyst.md
+│   │
+│   ├── 06-workflows/
+│   │   ├── README.md
+│   │   ├── workflow-model.md
+│   │   ├── feature-development.md
+│   │   ├── bug-fix.md
+│   │   ├── refactoring.md
+│   │   ├── release.md
+│   │   ├── hotfix.md
+│   │   ├── adr-workflow.md
+│   │   └── documentation-workflow.md
+│   │
+│   ├── 07-governance/
+│   │   ├── README.md
+│   │   ├── governance-model.md
+│   │   ├── engineering-metrics.md
+│   │   ├── ai-governance.md
+│   │   ├── review-cadence.md
+│   │   ├── quality-gates.md
+│   │   └── maturity-assessment.md
+│   │
+│   ├── 08-standards/
+│   │   ├── README.md
+│   │   ├── documentation-standard.md
+│   │   ├── coding-standard.md
+│   │   ├── testing-standard.md
+│   │   ├── security-standard.md
+│   │   ├── architecture-standard.md
+│   │   ├── repository-standard.md
+│   │   └── ai-standard.md
+│   │
+│   ├── 09-templates/
+│   │   ├── README.md
+│   │   ├── domain-specification-template.md
+│   │   ├── adr-template.md
+│   │   ├── implementation-inventory-template.md
+│   │   ├── traceability-matrix-template.md
+│   │   ├── engineering-baseline-template.md
+│   │   ├── skill-template.md
+│   │   ├── capability-template.md
+│   │   ├── workflow-template.md
+│   │   └── agent-template.md
+│   │
+│   ├── 10-reference/
+│   │   ├── README.md
+│   │   ├── enterprise-portal-example.md
+│   │   ├── phase1-example.md
+│   │   ├── feature-development-example.md
+│   │   └── governance-example.md
+│   │
+│   ├── decisions/
+│   │   ├── README.md
+│   │   ├── ADR-0001-repository-structure.md
+│   │   ├── ADR-0002-persona-model.md
+│   │   ├── ADR-0003-capability-model.md
+│   │   └── ADR-0004-governance-model.md
+│   │
+│   └── book/
+│       ├── 01-why-engineering-operating-model.md
+│       ├── 02-core-concepts.md
+│       ├── 03-operating-model.md
+│       ├── 04-personas.md
+│       ├── 05-capabilities.md
+│       ├── 06-skills.md
+│       ├── 07-agents.md
+│       ├── 08-workflows.md
+│       ├── 09-governance.md
+│       └── 10-reference-implementation.md
+│
+├── examples/
+├── diagrams/
+├── assets/
+│
+└── .github/
+    ├── ISSUE_TEMPLATE/
+    └── PULL_REQUEST_TEMPLATE.md
+```
+
+---
+
+# Framework Architecture
+
+The Engineering Operating Model consists of three logical layers.
+
+```text
+Governance Layer
+
+↓
+
+Orchestration Layer
+
+↓
+
+Execution Layer
+```
+
+## Governance Layer
+
+Defines:
+
+* Policies
+* Standards
+* Metrics
+* Quality Gates
+* AI Governance
+* Continuous Improvement
+
+Governance observes and improves the operating model.
+
+---
+
+## Orchestration Layer
+
+Defines:
+
+* Workflows
+* Decision Flows
+* Lifecycle
+
+Workflows coordinate engineering capabilities to deliver business outcomes.
+
+---
+
+## Execution Layer
+
+```text
+Persona
+    ↓
+Capability
+    ↓
+Agent
+    ↓
+Skill
+    ↓
+Artifact
+```
+
+### Persona
+
+Owns an engineering discipline.
+
+### Capability
+
+Represents reusable engineering functions.
+
+### Agent
+
+Human or AI executor.
+
+### Skill
+
+Reusable engineering procedure.
+
+### Artifact
+
+Output produced by a skill.
+
+---
+
+# Navigation Philosophy
+
+The repository should be readable in two ways.
+
+## Reference Navigation
+
+Users can browse directly to any document.
+
+Every document must be self-contained.
+
+---
+
+## Guided Learning
+
+The `docs/book` section provides a narrative that teaches the framework from first principles.
+
+```text
+Why EOM
+
+↓
+
+Core Concepts
+
+↓
+
+Operating Model
+
+↓
+
+Personas
+
+↓
+
+Capabilities
+
+↓
+
+Skills
+
+↓
+
+Agents
+
+↓
+
+Workflows
+
+↓
+
+Governance
+
+↓
+
+Reference Implementation
+```
+
+---
+
+# Release Strategy
+
+The repository evolves through versioned releases.
+
+| Release | Deliverable              |
+| ------- | ------------------------ |
+| v0.1.0  | Foundation               |
+| v0.2.0  | Personas                 |
+| v0.3.0  | Capabilities             |
+| v0.4.0  | Skills                   |
+| v0.5.0  | Agents                   |
+| v0.6.0  | Workflows                |
+| v0.7.0  | Governance               |
+| v0.8.0  | Standards                |
+| v0.9.0  | Templates                |
+| v1.0.0  | Reference Implementation |
+
+Each release should leave the framework in a usable state.
+
+---
+
+# Development Methodology
+
+The framework itself follows the same engineering practices it promotes.
+
+Every new concept follows the same lifecycle:
+
+1. Design
+2. Document
+3. Review
+4. Record ADR (if architectural)
+5. Version
+6. Commit
+7. Apply to a real project
+8. Improve through feedback
+
+The framework is continuously validated by applying it to enterprise software projects.
+
+---
+
+# Quality Bar
+
+Nothing is added to the repository unless it meets the following criteria:
+
+* Publishable without major edits.
+* Technically accurate.
+* Internally consistent.
+* Connected to the broader architecture.
+* Supported by diagrams where useful.
+* Designed for long-term maintainability.
+
+The goal is not to produce documentation.
+
+The goal is to build a reusable Engineering Operating Model that can be adopted by engineering teams across multiple enterprise projects.
