@@ -1,0 +1,203 @@
+# Engineering Operating Model – Architectural Decisions
+
+## Purpose
+
+This document captures the foundational architectural decisions made during the design of the Engineering Operating Model (EOM). These decisions define the philosophy, structure, and evolution of the framework and serve as guiding principles for all future work.
+
+---
+
+# Decision 1 – The Framework is Product Agnostic
+
+The Engineering Operating Model is not designed for a single application or technology stack.
+
+It defines **how engineering is performed**, regardless of the product being developed.
+
+Products consume the operating model rather than embedding it.
+
+**Rationale**
+
+* Encourages reuse across projects.
+* Promotes consistency.
+* Allows continuous improvement independent of application development.
+
+---
+
+# Decision 2 – AI is an Enabler, not the Foundation
+
+The operating model functions independently of AI.
+
+AI augments engineering activities but does not define the engineering process.
+
+Every workflow must remain executable by human engineers.
+
+AI agents are interchangeable participants within the execution model.
+
+**Principle**
+
+Engineering first.
+
+AI second.
+
+---
+
+# Decision 3 – Documentation is a First-Class Engineering Artifact
+
+Documentation is part of the engineering process rather than an afterthought.
+
+Specifications, ADRs, inventories, traceability matrices, workflows, standards, and governance documents are treated as version-controlled engineering assets.
+
+Documentation evolves alongside implementation.
+
+---
+
+# Decision 4 – Governance is Continuous
+
+Governance is not a stage within feature delivery.
+
+Governance continuously evaluates:
+
+* Engineering quality
+* Standards compliance
+* Documentation quality
+* AI effectiveness
+* Architectural integrity
+* Technical debt
+* Process maturity
+
+Governance improves the operating model rather than approving individual implementation tasks.
+
+---
+
+# Decision 5 – Workflows Orchestrate Engineering
+
+Workflows define **when** engineering capabilities are invoked.
+
+Workflows do not perform engineering work.
+
+Examples include:
+
+* New Feature
+* Bug Fix
+* Refactoring
+* Release
+* Hotfix
+* ADR Lifecycle
+
+---
+
+# Decision 6 – Capabilities Represent Engineering Functions
+
+Capabilities define reusable engineering functions owned by personas.
+
+Examples include:
+
+* Threat Modeling
+* Architecture Review
+* Requirement Analysis
+* Implementation Discovery
+* Testing Assessment
+
+Capabilities are reusable across workflows.
+
+---
+
+# Decision 7 – Skills Define Execution
+
+Skills are reusable engineering procedures executed by agents.
+
+Skills produce standardized engineering artifacts.
+
+Examples include:
+
+* Backend Analysis
+* API Assessment
+* Implementation Inventory
+* Engineering Confidence Assessment
+
+---
+
+# Decision 8 – Personas Own Capabilities
+
+Each engineering discipline is represented by a Persona.
+
+Personas own engineering capabilities.
+
+Current personas:
+
+* Product
+* Security
+* Architecture
+* Engineering
+* QA
+* DevOps
+* Governance
+
+---
+
+# Decision 9 – Agents Execute Skills
+
+Agents represent human engineers or AI assistants.
+
+Agents execute skills on behalf of personas.
+
+The operating model intentionally avoids coupling execution to any specific AI technology.
+
+---
+
+# Decision 10 – Artifacts Drive Engineering
+
+Every engineering activity produces a measurable artifact.
+
+Examples include:
+
+* Specifications
+* ADRs
+* Test Plans
+* Traceability Matrices
+* Inventories
+* Security Reviews
+* Engineering Reports
+
+Artifacts become inputs to subsequent workflows.
+
+---
+
+# Decision 11 – Engineering Knowledge is Versioned
+
+The operating model itself evolves through version-controlled releases.
+
+Framework evolution follows semantic versioning.
+
+Engineering practices improve incrementally while maintaining backward compatibility where practical.
+
+---
+
+# Decision 12 – The Framework Should Explain Itself
+
+Every document must answer:
+
+* Why does this exist?
+* When should it be used?
+* Who owns it?
+* What inputs does it require?
+* What outputs does it produce?
+* Which documents depend upon it?
+
+No document should rely on external context to be understood.
+
+---
+
+# Guiding Philosophy
+
+The Engineering Operating Model should remain:
+
+* Technology Agnostic
+* Product Agnostic
+* AI Agnostic
+* Domain Driven
+* Specification Driven
+* Test Driven
+* Governed
+* Continuously Evolvable
+
+The framework defines how engineering is performed, not how software is coded.
