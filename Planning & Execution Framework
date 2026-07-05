@@ -1,0 +1,564 @@
+# Engineering Operating Model - Planning & Execution Framework
+
+## Purpose
+
+This document summarizes the planning hierarchy, repository organization, and execution model for the Engineering Operating Model (EOM).
+
+The objective is to establish a clear separation between long-term strategy, framework evolution, project execution, and day-to-day engineering work.
+
+---
+
+# Planning Hierarchy
+
+The Engineering Operating Model is organized into five planning levels.
+
+```text
+Vision
+    │
+    ▼
+Roadmap (Releases)
+    │
+    ▼
+Milestones
+    │
+    ▼
+Sprints
+    │
+    ▼
+Tasks
+```
+
+Each level answers a different question.
+
+| Level     | Purpose                                   | Time Horizon |
+| --------- | ----------------------------------------- | ------------ |
+| Vision    | Why does the framework exist?             | Years        |
+| Roadmap   | What capabilities will be introduced?     | Months       |
+| Milestone | What major outcome will be achieved?      | Weeks        |
+| Sprint    | What will be delivered next?              | 1-2 Weeks    |
+| Task      | What specific work needs to be completed? | Daily        |
+
+---
+
+# Framework Roadmap
+
+The roadmap defines the evolution of the Engineering Operating Model itself.
+
+## Release v0.1.0
+
+Foundation
+
+Deliverables
+
+* Repository
+* Vision
+* Mission
+* Principles
+* Operating Model
+* Roadmap
+
+---
+
+## Release v0.2.0
+
+Personas
+
+Deliverables
+
+* Product Persona
+* Security Persona
+* Architecture Persona
+* Engineering Persona
+* QA Persona
+* DevOps Persona
+* Governance Persona
+
+---
+
+## Release v0.3.0
+
+Capabilities
+
+Deliverables
+
+Capability model and persona capability libraries.
+
+---
+
+## Release v0.4.0
+
+Skills
+
+Deliverables
+
+Initial engineering skill library.
+
+---
+
+## Release v0.5.0
+
+Agents
+
+Deliverables
+
+Human and AI agent definitions.
+
+---
+
+## Release v0.6.0
+
+Workflows
+
+Deliverables
+
+Engineering workflows and lifecycle definitions.
+
+---
+
+## Release v0.7.0
+
+Governance
+
+Deliverables
+
+Governance model, engineering metrics, maturity model.
+
+---
+
+## Release v0.8.0
+
+Standards
+
+Deliverables
+
+Documentation, testing, security, repository, and architecture standards.
+
+---
+
+## Release v0.9.0
+
+Templates
+
+Deliverables
+
+Engineering document templates and reusable artifacts.
+
+---
+
+## Release v1.0.0
+
+Reference Implementation
+
+Deliverables
+
+Complete Engineering Operating Model with examples and implementation guidance.
+
+---
+
+# Enterprise Transformation Phases
+
+These phases apply to transforming an existing software product using the Engineering Operating Model.
+
+## Phase 1
+
+Establish Engineering Confidence
+
+Objective
+
+Understand the current implementation and create a safe foundation for future evolution.
+
+Milestones
+
+* Baseline Freeze
+* Implementation Inventory
+* Requirements Traceability
+* Engineering Safety Net
+* Continuous Integration
+* Engineering Baseline Report
+
+---
+
+## Phase 2
+
+Establish Engineering Standards
+
+Objective
+
+Standardize engineering practices.
+
+Examples
+
+* Coding standards
+* Testing standards
+* Documentation standards
+* ADR process
+
+---
+
+## Phase 3
+
+Introduce AI-Native Engineering
+
+Objective
+
+Introduce AI agents, skills, and governed workflows.
+
+---
+
+## Phase 4
+
+Continuous Evolution
+
+Objective
+
+Operate the platform using the Engineering Operating Model with ongoing governance and improvement.
+
+---
+
+# Sprint Structure
+
+Every milestone is executed through one or more sprints.
+
+Example
+
+Milestone
+
+Implementation Inventory
+
+↓
+
+Sprint 1
+
+Repository preparation
+
+↓
+
+Sprint 2
+
+Domain Inventory
+
+↓
+
+Sprint 3
+
+Review
+
+↓
+
+Sprint 4
+
+Finalize
+
+Each sprint contains executable engineering tasks.
+
+---
+
+# Repository Structure
+
+```text
+engineering-operating-model/
+
+README.md
+
+docs/
+
+    00-foundation/
+
+    01-operating-model/
+
+    02-personas/
+
+    03-capabilities/
+
+    04-skills/
+
+    05-agents/
+
+    06-workflows/
+
+    07-governance/
+
+    08-standards/
+
+    09-templates/
+
+    10-reference/
+
+    decisions/
+
+examples/
+
+diagrams/
+
+assets/
+```
+
+Each module represents a major component of the Engineering Operating Model.
+
+---
+
+# Engineering Architecture
+
+The framework is organized into three logical layers.
+
+```text
+Governance Layer
+
+↓
+
+Orchestration Layer
+
+↓
+
+Execution Layer
+```
+
+---
+
+## Governance Layer
+
+Responsible for:
+
+* Policies
+* Standards
+* Metrics
+* Continuous Improvement
+* AI Governance
+* Repository Governance
+
+Governance observes and improves the operating model rather than participating directly in feature delivery.
+
+---
+
+## Orchestration Layer
+
+Responsible for coordinating engineering activities.
+
+Primary concepts
+
+* Engineering Workflows
+* Lifecycle
+* Decision Flow
+
+Workflows invoke engineering capabilities in the required sequence.
+
+---
+
+## Execution Layer
+
+The execution hierarchy is:
+
+```text
+Persona
+    ↓
+Capability
+    ↓
+Agent
+    ↓
+Skill
+    ↓
+Artifact
+```
+
+---
+
+# Ownership Model
+
+## Persona
+
+Represents an engineering discipline.
+
+Examples
+
+* Product
+* Security
+* Architecture
+* Engineering
+* QA
+* DevOps
+* Governance
+
+---
+
+## Capability
+
+Represents a reusable engineering function.
+
+Examples
+
+* Requirement Analysis
+* Threat Modeling
+* Architecture Review
+* Testing Assessment
+
+Capabilities belong to Personas.
+
+---
+
+## Agent
+
+Represents the executor.
+
+An Agent may be:
+
+* Human Engineer
+* AI Assistant
+* Automation
+
+Agents execute Skills.
+
+---
+
+## Skill
+
+Represents a repeatable engineering procedure.
+
+Examples
+
+* Implementation Inventory
+* Backend Analysis
+* API Review
+* Traceability Assessment
+* Security Assessment
+* Engineering Confidence Assessment
+
+Skills produce standardized engineering artifacts.
+
+---
+
+## Artifact
+
+Represents the output produced by a Skill.
+
+Examples
+
+* Specification
+* ADR
+* Test Plan
+* Inventory
+* Traceability Matrix
+* Engineering Report
+
+Artifacts become inputs to future engineering activities.
+
+---
+
+# Workflow Model
+
+Engineering work is orchestrated through workflows.
+
+Example
+
+```text
+Feature Development
+
+↓
+
+Product Capability
+
+↓
+
+Security Capability
+
+↓
+
+Architecture Capability
+
+↓
+
+Engineering Capability
+
+↓
+
+QA Capability
+
+↓
+
+DevOps Capability
+
+↓
+
+Deployment
+
+↑
+
+Governance continuously monitors every stage
+```
+
+Workflows orchestrate capabilities.
+
+Capabilities coordinate agents.
+
+Agents execute skills.
+
+Skills produce artifacts.
+
+Governance monitors the entire system.
+
+---
+
+# Relationship Between Repository Modules
+
+```text
+Vision
+
+↓
+
+Operating Model
+
+↓
+
+Personas
+
+↓
+
+Capabilities
+
+↓
+
+Agents
+
+↓
+
+Skills
+
+↓
+
+Workflows
+
+↓
+
+Standards
+
+↓
+
+Templates
+
+↓
+
+Reference Implementation
+```
+
+Each layer builds upon the previous one.
+
+No module should exist independently of the layers above it.
+
+---
+
+# Guiding Principles
+
+The Engineering Operating Model is:
+
+* Product Agnostic
+* Technology Agnostic
+* AI Agnostic
+* Specification Driven
+* Domain Driven
+* Test Driven
+* Governance Driven
+* Documentation First
+* Continuously Evolvable
+
+AI is an accelerator of engineering rather than the definition of engineering itself.
+
+The framework should remain valuable regardless of the specific tools, programming languages, or AI technologies used to implement software.
