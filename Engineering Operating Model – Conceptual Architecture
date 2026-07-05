@@ -1,0 +1,141 @@
+# Engineering Operating Model – Conceptual Architecture
+
+## The Three-Layer Model
+
+The Engineering Operating Model is organised into three logical layers.
+
+---
+
+## Layer 1 – Governance
+
+Defines the rules that guide engineering.
+
+Responsibilities include:
+
+* Standards
+* Policies
+* Quality Gates
+* Metrics
+* AI Governance
+* Engineering Maturity
+* Continuous Improvement
+
+Governance observes and improves the system but does not participate directly in feature implementation.
+
+---
+
+## Layer 2 – Orchestration
+
+Defines engineering processes.
+
+Primary concepts:
+
+* Workflows
+* Lifecycle
+* Decision Flow
+
+A workflow coordinates engineering capabilities required to achieve a business outcome.
+
+Examples:
+
+* Feature Development
+* Bug Fix
+* Refactoring
+* Release Management
+* ADR Lifecycle
+
+---
+
+## Layer 3 – Execution
+
+Execution is performed through the following hierarchy.
+
+```text
+Persona
+    ↓
+Capability
+    ↓
+Agent
+    ↓
+Skill
+    ↓
+Artifact
+```
+
+### Persona
+
+Represents an engineering discipline responsible for a defined area of ownership.
+
+### Capability
+
+Represents a reusable engineering function owned by a Persona.
+
+### Agent
+
+Represents the entity (human or AI) responsible for executing work.
+
+### Skill
+
+Represents a repeatable engineering procedure that produces standardized outputs.
+
+### Artifact
+
+Represents the tangible engineering deliverable produced by a Skill.
+
+Examples include:
+
+* Specifications
+* Architecture Decision Records
+* Test Plans
+* Engineering Reports
+* Traceability Matrices
+* Implementation Inventories
+
+---
+
+## End-to-End Engineering Flow
+
+```text
+Business Need
+        ↓
+Specification
+        ↓
+Workflow
+        ↓
+Persona
+        ↓
+Capability
+        ↓
+Agent (Human or AI)
+        ↓
+Skill
+        ↓
+Artifact
+        ↓
+Governance Feedback
+```
+
+The flow is iterative.
+
+Artifacts generated during execution become inputs to future engineering activities, while Governance continuously monitors and improves the operating model based on measurable outcomes.
+
+---
+
+## Design Principles
+
+The architecture is based on the following principles:
+
+* Separation of concerns.
+* Explicit ownership.
+* Reusable engineering capabilities.
+* Technology independence.
+* AI as an execution accelerator.
+* Continuous governance.
+* Traceability from business need to engineering artifact.
+* Incremental evolution through versioned releases.
+
+---
+
+## Vision
+
+The Engineering Operating Model provides a scalable, reusable architecture for enterprise software engineering that enables consistent delivery, measurable quality, and effective collaboration between human engineers and AI-assisted tooling.
